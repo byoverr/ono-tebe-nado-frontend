@@ -1,5 +1,13 @@
 export type LotStatus = 'wait' | 'active' | 'closed';
 
+export interface IAppState {
+    catalog: ILot[];
+    basket: string[];
+    preview: string | null;
+    order: IOrder | null;
+    loading: boolean;
+}
+
 export interface IAuction {
     status: LotStatus;
     datetime: string;
